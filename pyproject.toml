@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "errordep"
+version = "0.1.0"
+description = "Are your LLM judges and verifiers really independent? Error-dependence diagnostics for checker panels."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["llm", "evaluation", "llm-as-a-judge", "ai-safety", "verification", "statistics"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.scripts]
+errordep = "errordep.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
